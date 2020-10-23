@@ -12,3 +12,14 @@ Ajouter mosquitto.conf
 allow_anonymous false
 password_file /etc/mosquitto/passwordfile
 ```
+
+
+## Influx
+```
+wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -
+source /etc/lsb-release
+echo "deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | tee /etc/apt/sources.list.d/influxdb.list
+apt update
+apt install influxdb
+service influxdb start
+```
