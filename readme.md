@@ -1,11 +1,14 @@
 # Configuration
 ## Mosquitto
 ### Installation & Configuration de base
-- sudo apt update && apt upgrade
-- sudo apt install mosquitto
-- cd /etc/mosquitto
-- sudo mosquitto_passwd -c passwordfile VOTRE_PREMIER_UTILISATEUR
-- sudo nano mosquitto.conf
+https://iooner.io/installer-un-broker-mqtt-mosquitto-ubuntu/
+```
+sudo apt update && apt upgrade
+sudo apt install mosquitto
+cd /etc/mosquitto
+sudo mosquitto_passwd -c passwordfile VOTRE_PREMIER_UTILISATEUR
+sudo nano mosquitto.conf
+```
 
 Ajouter mosquitto.conf
 ```
@@ -15,6 +18,7 @@ password_file /etc/mosquitto/passwordfile
 
 
 ## Influx
+https://docs.influxdata.com/influxdb/v1.8/introduction/install/
 ```
 wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -
 source /etc/lsb-release
